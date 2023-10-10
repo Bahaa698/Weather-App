@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="images/download.jpg" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bree+Serif&family=Heebo:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Noto+Sans:wght@300&family=Nunito:wght@200;400&family=Open+Sans:wght@400;500;600;700;800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Righteous&family=Roboto:wght@300;400;500;700;900&family=Source+Code+Pro:ital,wght@0,300;0,400;1,300&family=Source+Sans+3:wght@300;700&family=Source+Serif+4&family=Titillium+Web:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <section id="navbar-content">
+        <nav class="navbar bg-dark navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/logo.png">
+                </a>
+                <div class="logo">
+                    <a href="" class="text-decoration-none text-white">
+                        <h1>Weather</h1>
+                        <span>tagline goes here</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto gap-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Live Cameras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </section>
+
+    <section id="weather-content">
+        <div class="weather-img">
+            <div class="container">
+                <div class="find-location position-relative">
+                    <input id="search" class="rounded-5 search" type="text" placeholder="Find your location...">
+                    <input id="btnSearch" type="button" value="Find" class="position-absolute">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container test">
+            <div class="row gx-0">
+        
+                <!-- ^ Today -->
+        
+                <div class="col-xl-4">
+                    <div class="forecast-today">
+                        <div class="forecast-header d-flex justify-content-between">
+                            <p class="mb-0" id="todayDayName">Sunday</p>
+                            <div class="date">
+                                <span class="mb-0" id="TodayDate">12</span> <span id="TodayMonth">August</span>
+                            </div>
+        
+                        </div>
+                        <div class="forecast-content">
+                            <div class="forecast-location" id="userLocation">London</div>
+                            <div class="forecast-today-degree d-flex align-items-center justify-content-between">
+                                <div class="num">
+                                    <span id="todayTemp" class="me-0">20</span><sup>o</sup>C
+                                </div>
+                                <div class="forecast-icon">
+                                    <img src="images/116.webp" alt="" id="todayIcon">
+                                </div>
+                            </div>
+                            <div class="custom" id="todayWeather">Partly cloudy</div>
+                            <img src="images/icon-umberella.png" class="pe-1" alt=""><span id="humidity">20%</span>
+                            <img src="images/icon-wind.png" class="pe-1" alt=""><span id="windKph">18km/h</span>
+                            <img src="images/icon-compass.png" class="pe-1" alt=""><span id="windDirection">East</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- ^ Tomorrow  -->
+        
+                <div class="col-xl-4">
+                    <div class="forecast-tomorrow">
+                        <div class="forecast-tomorrow-header">
+                            <p class="mb-0 text-center next-today-name">Monday</p>
+                        </div>
+                        <div class="forecast-tomorrow-content text-center forecast-content-padding">
+                            <div class="forecast-icon">
+                                <img src="images/113.png" class="next-today-img" alt="">
+                            </div>
+                            <div class="max-degree"><span class="next-today-max-temp">39.8</span><sup>o</sup>C</div>
+                            <div class="min-degree"><span class="next-today-min-temp">24.4</span><sup>o</sup></div>
+                            <div class="custom next-today-weather">Sunny</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- ^ After Tomorrow  -->
+        
+                <div class="col-xl-4">
+                    <div class="forecast-after-tomorrow">
+                        <div class="forecast-header">
+                            <p class="mb-0 text-center next-today-name">Sunday</p>
+                        </div>
+                        <div class="forecast-content text-center">
+                            <div class="forecast-icon">
+                                <img src="images/113.png" class="next-today-img" alt="">
+                            </div>
+                            <div class="max-degree"><span class="next-today-max-temp">39.8</span><sup>o</sup>C</div>
+                            <div class="min-degree"><span class="next-today-min-temp">24.4</span><sup>o</sup></div>
+                            <div class="custom next-today-weather">Sunny</div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div> 
+    </section>
+
+    <footer id="footer">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="Subscribe position-relative">
+                        <input class="rounded-5 search" type="text" placeholder="Enter your email to subscribe...">
+                        <input type="button" value="Subscribe" class="position-absolute">
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center offset-md-1">
+                    <div class="social-icons d-flex rounded gap-2">
+                        <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                            <a href="https://twitter.com/?lang=en" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                            <a href="https://www.google.com/?hl=ar" target="_blank">
+                                <i class="fa-brands fa-google"></i>
+                            </a>
+                        </div>
+                        <div class="icon d-flex justify-content-center align-items-center rounded-circle">
+                            <a href="https://www.pinterest.com/" target="_blank">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4 ms-md-2">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+
+</html>
